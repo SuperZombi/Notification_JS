@@ -1,2 +1,2 @@
-# notification_js
+# Notification_JS
 Quickly create a notification item
