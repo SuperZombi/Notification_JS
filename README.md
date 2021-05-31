@@ -7,7 +7,6 @@ Quickly create a notification item
 HTML:
 ```html
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src="notifications.js"></script>
 	<link rel="stylesheet" type="text/css" href="notifications.css">
