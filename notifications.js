@@ -112,7 +112,7 @@ async function NewWarning(text, elem, autohide=true, ms=5000, buttons=null){
 	}
 	div_el = await NewNotice("warning", text, buttons)
 	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 0));
+	await new Promise(resolve => setTimeout(resolve, 20));
 	div_el.style.opacity = 1;
 	div_el.style.transform = "scale(1)";
 
@@ -124,7 +124,7 @@ async function NewWarning(text, elem, autohide=true, ms=5000, buttons=null){
 		hide_notification(counter, ms)
 	}
 	counter++;
-	await new Promise(resolve => setTimeout(resolve, 600));
+	await new Promise(resolve => setTimeout(resolve, 400));
 }
 async function NewWarning2(args){
 	text = args.text;
@@ -150,7 +150,7 @@ async function NewError(text, elem, autohide=true, ms=5000, buttons=null){
 	}
 	div_el = await NewNotice("error", text, buttons)
 	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 0));
+	await new Promise(resolve => setTimeout(resolve, 20));
 	div_el.style.opacity = 1;
 	div_el.style.transform = "scale(1)";
 
@@ -162,7 +162,7 @@ async function NewError(text, elem, autohide=true, ms=5000, buttons=null){
 		hide_notification(counter, ms)
 	}
 	counter++;
-	await new Promise(resolve => setTimeout(resolve, 600));
+	await new Promise(resolve => setTimeout(resolve, 400));
 }
 async function NewError2(args){
 	text = args.text;
@@ -188,7 +188,7 @@ async function NewSuccess(text, elem, autohide=true, ms=5000, buttons=null){
 	}
 	div_el = await NewNotice("success", text, buttons)
 	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 0));
+	await new Promise(resolve => setTimeout(resolve, 20));
 	div_el.style.opacity = 1;
 	div_el.style.transform = "scale(1)";
 
@@ -200,7 +200,7 @@ async function NewSuccess(text, elem, autohide=true, ms=5000, buttons=null){
 		hide_notification(counter, ms)
 	}
 	counter++;
-	await new Promise(resolve => setTimeout(resolve, 600));
+	await new Promise(resolve => setTimeout(resolve, 400));
 }
 async function NewSuccess2(args){
 	text = args.text;
