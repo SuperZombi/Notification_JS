@@ -13,6 +13,19 @@ HTML:
 </head>
 ```
 
+<details>
+	<summary>CDN:</summary>
+	
+```html
+<link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
+<script src="https://superzombi.github.io/Notification_JS/notifications.js"></script>
+```
+</details>
+
+<hr>
+</br>
+
+
 JavaScript:
 ```javascript
   //Set parent element for notifications
