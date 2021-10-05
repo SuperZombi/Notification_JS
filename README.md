@@ -57,3 +57,7 @@ JavaScript:
 }
 ```
 </details>
+
+<hr>
+
+#### <a href="https://www.donationalerts.com/r/super_zombi">Support the project</a>
