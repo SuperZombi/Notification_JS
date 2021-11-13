@@ -3,6 +3,15 @@ Quickly create a notification item
 
 ## Notifications 2.0
 
+<details>
+	<summary>What's new</summary>
+	
+* Get rid of jQuery
+* Rewritten architecture for OOP
+* Reduced file size
+	
+</details>
+
 ### Usage:
 
 HTML:
