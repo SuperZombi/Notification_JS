@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<script src="notifications2.js"></script>
+	<link rel="stylesheet" type="text/css" href="notifications.css">
+
+<style type="text/css">
+	#notifications{
+		position: absolute;
+		right: 2px;
+		bottom: 0;
+	}
+</style>
+</head>
+<body>
+<div id="notifications">
+
+</div>
+
+<script type="text/javascript">
+	function show_more(){
+		alert("here")
+	}
+	window.onload = function(){
+		setTimeout(async function(){
+			notice = Notification('#notifications');
+			//notice = Notification();
+			await notice.Warning("Hello world!", false)
+			await notice.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
+			await notice.Success("Hello world!")
+
+			/*
+			// Clear non active
+			notice.clear()
+
+			// Clear all notifications
+			notice.clearAll()
+			*/
+	}, 500)
+	}
+
+</script>
+
+</body>
+</html>
