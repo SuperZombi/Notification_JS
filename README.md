@@ -8,7 +8,7 @@ Quickly create a notification item
 	
 * Get rid of jQuery
 * Rewritten architecture for OOP
-* Reduced file size
+* Reduced file size and increased work speed
 	
 </details>
 
@@ -32,14 +32,18 @@ JavaScript:
 	await notice.Success("Hello world!")
   }
 ```
+## Methods:
 
-
-### New...(text, element, autohide, ms, buttons)
+### ```Warning()```, ```Error()```, ```Success()``` (text, element, autohide, ms, buttons)
   <code>text</code> - string (Required) </br>
   <code>element</code> - document.Element (default: <code>document.body</code>) </br>
   <code>autohide</code> - boolean (default: <code>true</code>) </br>
   <code>ms</code> - integer (default: <code>5000</code>) (milliseconds) </br>
   <code>buttons</code> - array ( <code>[button_name]</code> )   ( <code>[[button_name, function]]</code> )
+  
+### ```clear()``` - Clear non active notifications
+
+### ```clearAll()``` - Clear all notifications
   
 
 
