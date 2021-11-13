@@ -32,7 +32,8 @@ JavaScript:
 	await notice.Success("Hello world!")
   }
 ```
-<a href="/2.0/example.html">Usage Example</a>
+<a href="/2.0/example.html">Usage Example</a> | 
+<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
 ## Methods:
 
 ### ```Warning()```, ```Error()```, ```Success()``` (text, element, autohide, ms, buttons)
