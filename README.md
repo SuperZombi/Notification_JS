@@ -32,6 +32,7 @@ JavaScript:
 	await notice.Success("Hello world!")
   }
 ```
+<a href="/2.0/example.html">Usage Example</a>
 ## Methods:
 
 ### ```Warning()```, ```Error()```, ```Success()``` (text, element, autohide, ms, buttons)
