@@ -33,7 +33,7 @@ JavaScript:
   }
 ```
 <a href="/2.0/example.html">Usage Example</a> | 
-<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
+<a href="https://superzombi.github.io/Notification_JS/2.0/example.html" target="_blank">Preview</a>
 ## Methods:
 
 ### ```Warning()```, ```Error()```, ```Success()``` (text, element, autohide, ms, buttons)
