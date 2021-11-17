@@ -64,8 +64,8 @@ JavaScript:
 ```
 	
 <p align="center">
-  <img src="imgs/minimalism_light.png" height="250px">
-	<img src="imgs/minimalism_dark.png" height="250px">
+  <img src="imgs/minimalism_light.png" height="220px">
+	<img src="imgs/minimalism_dark.png" height="220px">
 </p>
 	
 </details>
