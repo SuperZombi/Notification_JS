@@ -47,6 +47,15 @@ JavaScript:
 
 ### ```clearAll()``` - Clear all notifications
   
+  
+<hr>
+
+### Plugins
+
+#### Minimalism
+```html
+<link href="https://superzombi.github.io/Notification_JS/plugins/minimalism.css" rel="stylesheet">
+```
 
 
 <details>
@@ -59,6 +68,7 @@ JavaScript:
 ```
 
 </details>
+
 
 <hr>
 
