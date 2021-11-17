@@ -1,0 +1,102 @@
+.Message {
+	font-weight: 400;
+	margin: 10px auto 10px;
+	width: 420px;
+	background-color: white;
+	color: black;
+	border: 5px solid;
+}
+.Message--orange {
+	border-color: #F39C12;
+}
+.Message--orange .Message-icon > i {
+	color: #F39C12;
+}
+.Message--orange .Message-body > p {
+	color: darkorange;
+}
+.Message--orange .Message-close {
+	background-color: rgba(255, 140, 0, 0.5);
+}
+.Message--orange .Message-close:hover {
+	background-color: rgba(255, 140, 0, 0.8);
+}
+
+
+.Message--red {
+	border-color: #FF4136;
+}
+.Message--red .Message-icon > i {
+	color: #FF4136;
+}
+.Message--red .Message-body > p {
+	color: red;
+}
+.Message--red .Message-close {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+.Message--red .Message-close:hover {
+	background-color: rgba(255, 0, 0, 0.8);
+}
+
+
+.Message--green {
+	border-color: #2ECC40;
+}
+.Message--green .Message-icon > i {
+	color: green;
+}
+.Message--green .Message-body > p {
+	color: green;
+}
+.Message--green .Message-close {
+	background-color: rgba(0, 150, 0, 0.5);
+}
+.Message--green .Message-close:hover {
+	background-color: rgba(0, 150, 0, 0.8);
+}
+
+
+.Message-icon > i {
+	width: 25px;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+.Message-icon {
+	width: 50px;
+	padding: 0px;
+	background-color: inherit;
+	position: relative;
+}
+
+.Message-body {
+	font-size: 16pt;
+	padding: 10px 0px 10px 0px;
+}
+.Message-body > p {
+	margin: 5px;
+}
+
+.Message-button {
+	border-radius: 12px;
+	margin: 0 5px;
+	padding: 2px 12px;
+}
+.Message-button:active {
+	background: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0px rgba(0, 0, 0, 0.4);
+	top: 3px;
+}
+
+.Message-close {
+	background-color: rgba(0, 0, 0, 0.3);
+	opacity: 1;
+	padding: 0 4px;
+	transition: 0.2s;
+}
+.Message-close:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
