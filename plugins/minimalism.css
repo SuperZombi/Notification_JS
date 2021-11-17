@@ -2,7 +2,7 @@
 	font-weight: 400;
 	margin: 10px auto 10px;
 	width: 420px;
-	background-color: white;
+	background-color: rgb(255, 255, 255, 0.1);
 	color: black;
 	border: 5px solid;
 }
@@ -66,9 +66,9 @@
 	transform: translateY(-50%) translateX(-50%);
 }
 .Message-icon {
-	width: 50px;
+	width: 55px;
 	padding: 0px;
-	background-color: inherit;
+	background-color: transparent;
 	position: relative;
 }
 
