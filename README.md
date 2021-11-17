@@ -54,7 +54,7 @@ JavaScript:
   
 <hr>
 
-### Plugins
+## Plugins
 
 <details>
 	<summary>Minimalism</summary>
@@ -88,6 +88,7 @@ JavaScript:
 
 
 <hr>
+<br>
 
 <details>
 	<summary>Notifications 1.0 (Old)</summary>
