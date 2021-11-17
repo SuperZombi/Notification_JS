@@ -21,20 +21,20 @@ Quickly create a notification item
 HTML:
 ```html
 <head>
-	<link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
-	<script src="https://superzombi.github.io/Notification_JS/2.0/notifications.js"></script>
+    <link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
+    <script src="https://superzombi.github.io/Notification_JS/2.0/notifications.js"></script>
 </head>
 ```
 
 JavaScript:
 ```javascript
-  notice = Notification('#notifications');
+notice = Notification('#notifications');
   
-  async function func_name(){
-	await notice.Warning("Hello world!", false)
-	await notice.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
-	await notice.Success("Hello world!")
-  }
+async function func_name(){
+    await notice.Warning("Hello world!", false)
+    await notice.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
+    await notice.Success("Hello world!")
+}
 ```
 <a href="/2.0/example.html">Usage Example</a> | 
 <a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
