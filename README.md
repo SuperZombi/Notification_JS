@@ -1,7 +1,9 @@
 # Notification_JS
 Quickly create a notification item
 
-<img src="imgs/main.png" height="350px">
+<p align="center">
+  <img src="imgs/main.png" height="350px">
+</p>
 
 ## Notifications 2.0
 
