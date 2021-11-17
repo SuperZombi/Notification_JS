@@ -56,11 +56,20 @@ JavaScript:
 
 ### Plugins
 
-#### Minimalism
+<details>
+	<summary>Minimalism</summary>
+	
 ```html
 <link href="https://superzombi.github.io/Notification_JS/plugins/minimalism.css" rel="stylesheet">
 ```
+	
+<p align="center">
+  <img src="imgs/minimalism.png" height="300px">
+</p>
+	
+</details>
 
+<hr>
 
 <details>
 	<summary>Change notification width:</summary>
