@@ -113,6 +113,7 @@
 	cursor: pointer;
 	border-radius: 50%;
 	transition: 0.15s;
+	padding: 1px 5px;
 }
 .Message:hover .Message-close {
 	opacity: 1;
