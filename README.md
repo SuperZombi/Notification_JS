@@ -67,22 +67,9 @@ async function func_name(){
   <img src="imgs/minimalism_light.png" width="400px">
   <img src="imgs/minimalism_dark.png" width="400px">
   <br>
-  <a href="/plugins/example_minimalism.html">Usage Example</a> | 
+  <a href="/plugins/example_minimalism.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_minimalism.html">Preview</a>
 </p>
-
-</details>
-
-<hr>
-
-<details>
-	<summary>Change notification width:</summary>
-	
-```css
-.Message{
-     width: 300px;
-}
-```
 
 </details>
 
@@ -128,6 +115,18 @@ JavaScript:
     await Success("Hello world!")
   }
 ```
+
+
+<details>
+	<summary>Change notification width:</summary>
+	
+```css
+.Message{
+     width: 300px;
+}
+```
+
+</details>
 </details>
 
 
