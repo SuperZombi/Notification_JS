@@ -2,7 +2,7 @@
 Quickly create a notification item
 
 <p align="center">
-  <img src="imgs/main.png" height="350px">
+  <img src="imgs/main_img.png" height="350px">
 </p>
 
 ## Notifications 2.0
