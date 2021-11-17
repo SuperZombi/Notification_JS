@@ -80,7 +80,7 @@ async function func_name(){
 	
 ```css
 .Message{
-     width: 300px;
+    width: 300px;
 }
 ```
 
