@@ -40,9 +40,8 @@ async function func_name(){
 <a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
 ## Methods:
 
-### ```Warning()```, ```Error()```, ```Success()``` (text, element, autohide, ms, buttons)
+### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
   <code>text</code> - string (Required) </br>
-  <code>element</code> - document.Element (default: <code>document.body</code>) </br>
   <code>autohide</code> - boolean (default: <code>true</code>) </br>
   <code>ms</code> - integer (default: <code>5000</code>) (milliseconds) </br>
   <code>buttons</code> - array ( <code>[button_name]</code> )   ( <code>[[button_name, function]]</code> )
