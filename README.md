@@ -33,7 +33,7 @@ notice = Notification('#notifications');
 async function func_name(){
     await notice.Warning("Hello world!", false)
     await notice.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
-    await notice.Success("Hello world!")
+    await notice.Success("Hello world!", 3000)
 }
 ```
 <a href="/2.0/example.html">Usage Example</a> | 
