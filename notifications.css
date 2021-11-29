@@ -111,9 +111,8 @@
 	cursor: pointer;
 	border-radius: 50%;
 	transition: 0.15s;
-	height: 24px;
-    	width: 24px;
-	float: right;
+	height: 25px;
+    	width: 25px;
 	right: 5px;
 	top: 5px;
 	display: flex;
