@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://superzombi.github.io/Notification_JS/fonts/trebuchet-ms-2.ttf');
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url('https://superzombi.github.io/Notification_JS/fonts/trebuchet-ms-2.ttf');
+}
 
 .Message {
 	font-family: "Trebuchet MS";
@@ -39,9 +42,9 @@
 }
 
 .Message-button {
-	transition: 0.1s;
-	color: black;
-	font-family: 'Roboto';
+    transition: 0.1s;
+    color: black;
+    font-family: 'Roboto';
     -webkit-font-smoothing: antialiased;
     font-size: 11px;
     box-sizing: border-box;
