@@ -38,8 +38,11 @@ async function func_name(){
     await notice.Success("Hello world!", 3000)
 }
 ```
-<a href="/2.0/example.html">Usage Example</a> | 
-<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
+<p align="center">
+	<a href="/2.0/example.html">Usage Example</a> | 
+	<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
+</p>
+
 ## Methods:
 
 ### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
