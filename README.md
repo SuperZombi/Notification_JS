@@ -1,4 +1,5 @@
-# Notification_JS
+# Notification_JS     <img src="imgs/notification-logo.svg" height="100px" align="right">
+
 Quickly create a notification item
 
 <p align="center">
