@@ -69,7 +69,9 @@ async function func_name(){
   <a href="/plugins/example_minimalism.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_minimalism.html">Preview</a>
 </p>
-
+	
+<hr>
+	
 </details>
 
 <details>
@@ -80,7 +82,7 @@ async function func_name(){
 ```
 	
 <p align="center">
-  <img src="imgs/windows.png" width="400px">
+  <img src="imgs/windows.png" width="450px">
   <br>
   <a href="/plugins/example_windows.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_windows.html">Preview</a>
