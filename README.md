@@ -14,6 +14,7 @@ Quickly create a notification item
 * Get rid of jQuery
 * Rewritten architecture for OOP
 * Reduced file size and increased work speed
+* Added plugins
 	
 </details>
 
