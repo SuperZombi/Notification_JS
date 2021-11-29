@@ -116,14 +116,9 @@
 	float: right;
 	margin-right: 5px;
 	margin-top: 5px;
-}
-.Message-close > i{
-	position: absolute;
-	left: 0;
-	top: 0;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .Message:hover .Message-close {
 	opacity: 1;
