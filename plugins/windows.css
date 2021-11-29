@@ -94,6 +94,7 @@
     text-align: right;
     width: 100%;
     height: 25px;
+    justify-content: flex-end;
 }
 .Message-close:hover {
 	background-color: unset;
