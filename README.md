@@ -72,6 +72,21 @@ async function func_name(){
 
 </details>
 
+<details>
+	<summary>Windows XP</summary>
+	
+```html
+<link href="https://superzombi.github.io/Notification_JS/plugins/windows.css" rel="stylesheet">
+```
+	
+<p align="center">
+  <img src="imgs/windows.png" width="400px">
+  <br>
+  <a href="/plugins/example_windows.html">Example</a> | 
+  <a href="https://superzombi.github.io/Notification_JS/plugins/example_windows.html">Preview</a>
+</p>
+
+</details>
 
 <hr>
 
