@@ -76,6 +76,9 @@
     border-radius: 8px 8px 0 0;
     margin-right: 0;
     margin-top: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
     transition: 0s;
     background: linear-gradient(
         180deg,
