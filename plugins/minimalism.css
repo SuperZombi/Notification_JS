@@ -92,7 +92,6 @@
 .Message-close {
 	background-color: rgba(0, 0, 0, 0.3);
 	opacity: 1;
-	padding: 0 4px;
 	transition: 0.2s;
 }
 .Message-close:hover {
