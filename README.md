@@ -1,4 +1,4 @@
-# Notification_JS     <img src="imgs/notification-logo.svg" height="100px" align="right">
+# Notification_JS     <img src="imgs/notification-logo2.svg" height="100px" align="right">
 
 Quickly create a notification item
 
