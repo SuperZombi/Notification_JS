@@ -82,7 +82,7 @@ async function func_name(){
 ```
 	
 <p align="center">
-  <img src="imgs/windows.png" width="450px">
+  <img src="imgs/windowsXP.png" width="450px">
   <br>
   <a href="/plugins/example_windows.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_windows.html">Preview</a>
