@@ -107,17 +107,19 @@
 	outline: none;
 	font-size: 20px;
 	opacity: 0;
-	cursor: pointer;
 	border-radius: 50%;
 	transition: 0.15s;
 	height: 25px;
-    	width: 25px;
+	width: 25px;
 	float: right;
 	margin-right: 5px;
 	margin-top: 5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.Message-close > i{
+	cursor: pointer;
 }
 .Message:hover .Message-close {
 	opacity: 1;
