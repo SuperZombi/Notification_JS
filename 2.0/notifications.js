@@ -4,9 +4,8 @@ function Notification (argument) {
 
 function hide_notification(el, ms){
 	setTimeout(function() {
-		el.style.opacity = 0;
-		el.style.transform = "scale(0)";
-		setTimeout(function(){el.style.display = "none";}, 500)
+		el.classList.add("is-hidden")
+		setTimeout(function(){el.classList.add("hide")}, 1000)
 	}, ms);
 }
 
@@ -42,7 +41,7 @@ class Notifications {
 		if (this.element != document.body){
 			this.element.childNodes.forEach(function(e){
 				try{
-					if (e.style.display == "none"){
+					if (e.classList.contains("is-hidden")){
 						e.remove()
 					}
 				}
@@ -94,10 +93,10 @@ class Notifications {
 
 	async NewNotification(type, text, elem, autohide=true, ms=5000, buttons=null){
 		let div_el = await this.NewNotice(type, text, buttons)
+		div_el.classList.add("is-hidden")
 		elem.appendChild(div_el);
 		await new Promise(resolve => setTimeout(resolve, 20));
-		div_el.style.opacity = 1;
-		div_el.style.transform = "scale(1)";
+		div_el.classList.remove("is-hidden")
 
 		if (autohide){
 			hide_notification(div_el, ms)
@@ -152,8 +151,6 @@ class Notifications {
 		but.appendChild(i2);
 
 		div.appendChild(but);
-		div.style.opacity = 0;
-		div.style.transform = "scale(0)";
 		return div;
 	}
 
