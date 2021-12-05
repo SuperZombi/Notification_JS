@@ -99,10 +99,6 @@ class Notifications {
 		div_el.style.opacity = 1;
 		div_el.style.transform = "scale(1)";
 
-		div_el.onclick = function() {
-			hide_notification(div_el, 0);
-		}
-
 		if (autohide){
 			hide_notification(div_el, ms)
 		}
@@ -140,15 +136,19 @@ class Notifications {
 				if (typeof(buttons[j]) == "string"){
 					button.innerHTML = buttons[j]
 				}
+				button.addEventListener("click", function(){hide_notification(div, 0)}, false)
 				msg_body.appendChild(button);
 			}
 		}
 		div.appendChild(msg_body);
 
-		let but = document.createElement('button');
+		let but = document.createElement('div');
 		but.className = 'Message-close';
 		let i2 = document.createElement('i');
 		i2.className = "fa fa-times"
+		i2.onclick = function() {
+			hide_notification(div, 0);
+		}
 		but.appendChild(i2);
 
 		div.appendChild(but);
