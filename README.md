@@ -8,6 +8,11 @@ Quickly create a notification item
 
 ## Notifications 2.0
 
+<p align="center">
+	<a href="/2.0/example.html">Usage Example</a> | 
+	<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
+</p>
+
 <details>
 	<summary>What's new</summary>
 	
@@ -38,10 +43,6 @@ async function func_name(){
     await notice.Success("Hello world!", 3000)
 }
 ```
-<p align="center">
-	<a href="/2.0/example.html">Usage Example</a> | 
-	<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
-</p>
 
 ## Methods:
 
