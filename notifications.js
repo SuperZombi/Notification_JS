@@ -285,3 +285,5 @@ async function closeNotification(el_){
 	el_.style.transform = "scale(0)";
 	await new Promise(resolve => setTimeout(resolve, 0));
 }
+
+console.error("This version of Notification JS will be discontinued soon!\nPlease use the latest version of this library!\nhttps://github.com/SuperZombi/Notification_JS")
