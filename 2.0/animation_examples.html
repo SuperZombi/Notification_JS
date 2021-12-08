@@ -29,15 +29,15 @@
 			await notice.Warning("Default animation", 3000)
 			await sleep(500)
 
-			notice.animationIN("opacity")
+			notice.animationIN("opacity")  //<--
 			await notice.Warning("Only opacity", 3000)
 			await sleep(500)
 
-			notice.animationIN("scale")
+			notice.animationIN("scale")   //<--
 			await notice.Warning("Only scale", 3000)
 			await sleep(500)
 
-			notice.animationIN("scale", "scale-right")
+			notice.animationIN("scale", "scale-right")  //<--
 			await notice.Warning("Scale right", 3000)
 			await sleep(500)
 	}, 500)
