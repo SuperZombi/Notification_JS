@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification JS</title>
+	<link rel="shortcut icon" href="https://superzombi.github.io/Notification_JS/imgs/notification-logo.svg" type="image/svg+xml">
+	<link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
+	<script src="https://superzombi.github.io/Notification_JS/2.0/notifications.js"></script>
+
+<style type="text/css">
+	#notifications{
+		position: absolute;
+		right: 2px;
+		bottom: 0;
+		width: 500px;
+	}
+</style>
+</head>
+<body>
+<div id="notifications">
+
+</div>
+
+<script type="text/javascript">
+	async function sleep(ms){
+		await new Promise(resolve => setTimeout(resolve, ms));
+	}
+	window.onload = function(){
+		setTimeout(async function(){
+			notice = Notification('#notifications');
+
+			await notice.Warning("Default animation", 3000)
+			await sleep(500)
+
+			notice.animationIN("opacity")
+			await notice.Warning("Only opacity", 3000)
+			await sleep(500)
+
+			notice.animationIN("scale")
+			await notice.Warning("Only scale", 3000)
+			await sleep(500)
+
+			notice.animationIN("scale", "scale-right")
+			await notice.Warning("Scale right", 3000)
+			await sleep(500)
+	}, 500)
+	}
+
+</script>
+
+</body>
+</html>
