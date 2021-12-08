@@ -44,6 +44,48 @@ async function func_name(){
 }
 ```
 
+## Constructor:
+
+### ```Notification()```
+
+<table>
+	<tr>
+		<th>Attribute</th>
+		<th>Data type</th>
+		<th>Default</th>
+	</tr>
+	<tr>
+		<td> <code>element</code> </td>
+		<td>documentElement</td>
+		<td> <code>document.body</code> </td>
+	</tr>
+</table>
+
+
+### ```animationIN()```
+
+<table>
+	<tr>
+		<th>Attribute</th>
+		<th>Data type</th>
+		<th>Default</th>
+	</tr>
+	<tr>
+		<td> <code>anim_name</code> </td>
+		<td>string or array or arguments</td>
+		<td> <code>["scale", "opacity"]</code> </td>
+	</tr>
+</table>
+
+<details>
+	<summary>List of available values:</summary>
+	
+```javascript
+["none", "opacity", "scale", "scale-right", "scale-left"]
+```
+	
+</details>
+
 ## Methods:
 
 ### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
