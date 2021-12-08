@@ -30,6 +30,27 @@ class Notifications {
 				console.warn(`Element "${element}" was not found`)
 			}
 	  	}
+	  	this.animation_in = ["scale", "opacity"]
+	}
+
+	animationIN(anim_name){
+		var animations = ["opacity", "scale", "scale-right", "scale-left"]
+		if (anim_name){
+			if (anim_name == "none"){
+				this.animation_in = null
+			}
+			if (arguments.length > 1){
+				this.animation_in = Object.values(arguments)
+			}
+			else if (typeof(anim_name) == "object"){
+				this.animation_in = anim_name
+			}
+			else{
+				if (animations.includes(anim_name)){
+					this.animation_in = [anim_name]
+				}
+			}
+		}
 	}
 
 	clearAll(){
@@ -90,18 +111,32 @@ class Notifications {
 		return {text: text, autohide: autohide, ms: ms, buttons: buttons}
 	}
 
-
 	async NewNotification(type, text, elem, autohide=true, ms=5000, buttons=null){
 		let div_el = await this.NewNotice(type, text, buttons)
-		div_el.classList.add("is-hidden")
+		this.addAnimate(div_el)
 		elem.appendChild(div_el);
 		await new Promise(resolve => setTimeout(resolve, 20));
-		div_el.classList.remove("is-hidden")
+		div_el.removeAttribute("style");
 
 		if (autohide){
 			hide_notification(div_el, ms)
 		}
 		await new Promise(resolve => setTimeout(resolve, 400));
+	}
+
+	addAnimate(element){
+		if (this.animation_in.includes("scale")){
+			element.style.transform = "scale(0)"
+		}
+		if (this.animation_in.includes("scale-right")){
+			element.style.transformOrigin = "right bottom"
+		}
+		if (this.animation_in.includes("scale-left")){
+			element.style.transformOrigin = "left bottom"
+		}
+		if (this.animation_in.includes("opacity")){
+			element.style.opacity = 0
+		}
 	}
 
 	async NewNotice(what, text, buttons=null){
