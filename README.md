@@ -44,7 +44,17 @@ async function func_name(){
 }
 ```
 
-## Constructor:
+## Methods:
+
+### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
+  <code>text</code> - string (Required) </br>
+  <code>autohide</code> - boolean (default: <code>true</code>) </br>
+  <code>ms</code> - integer (default: <code>5000</code>) (milliseconds) </br>
+  <code>buttons</code> - array ( <code>[button_name]</code> )   ( <code>[[button_name, function]]</code> )
+  
+<hr>
+<details>
+	<summary>Constructor:</summary>
 
 ### ```Notification()```
 
@@ -60,7 +70,7 @@ async function func_name(){
 		<td> <code>document.body</code> </td>
 	</tr>
 </table>
-
+<hr>
 
 ### ```animationIN()```
 
@@ -86,20 +96,14 @@ async function func_name(){
 <a href="/2.0/animation_examples.html">Usage Example</a> | 
 <a href="https://superzombi.github.io/Notification_JS/2.0/animation_examples.html">Preview</a>
 </details>
-
-## Methods:
-
-### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
-  <code>text</code> - string (Required) </br>
-  <code>autohide</code> - boolean (default: <code>true</code>) </br>
-  <code>ms</code> - integer (default: <code>5000</code>) (milliseconds) </br>
-  <code>buttons</code> - array ( <code>[button_name]</code> )   ( <code>[[button_name, function]]</code> )
+<hr>
   
 ### ```clear()``` - Clear non active notifications
 
 ### ```clearAll()``` - Clear all notifications
   
-  
+</details>
+
 <hr>
 
 ## Plugins
