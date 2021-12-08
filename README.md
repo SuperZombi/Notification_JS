@@ -83,7 +83,8 @@ async function func_name(){
 ```javascript
 ["none", "opacity", "scale", "scale-right", "scale-left"]
 ```
-	
+<a href="/2.0/animation_examples.html">Usage Example</a> | 
+<a href="https://superzombi.github.io/Notification_JS/2.0/animation_examples.html">Preview</a>
 </details>
 
 ## Methods:
