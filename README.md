@@ -116,8 +116,8 @@ async function func_name(){
 ```
 	
 <p align="center">
-  <img src="imgs/minim_light.png" width="420px">
-  <img src="imgs/minim_dark.png" width="420px">
+  <img src="imgs/minim_light.png" width="410px">
+  <img src="imgs/minim_dark.png" width="410px">
   <br>
   <a href="/plugins/example_minimalism.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_minimalism.html">Preview</a>
