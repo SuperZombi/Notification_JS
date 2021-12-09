@@ -104,7 +104,7 @@
 }
 .Message-button:active {
 	background: rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0;
+	box-shadow: 0 0 rgba(0, 0, 0, 0.4);
 	top: 3px;
 }
 
