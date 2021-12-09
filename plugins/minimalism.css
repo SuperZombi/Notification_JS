@@ -72,7 +72,7 @@
 
 .Message-body {
 	font-size: 16pt;
-	padding: 8px 0px 8px 0px;
+	padding: 8px 0px;
 	text-align: right;
 }
 .Message-body > p {
