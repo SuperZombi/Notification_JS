@@ -72,15 +72,19 @@
 
 .Message-body {
 	font-size: 16pt;
-	padding: 10px 0px 10px 0px;
+	padding: 8px 0px 8px 0px;
+	text-align: right;
 }
 .Message-body > p {
 	margin: 5px;
+	display: inline-block;
+	float: left;
+	text-align: left;
 }
 
 .Message-button {
 	border-radius: 12px;
-	margin: 0 5px;
+	margin: 5px;
 	padding: 2px 12px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
