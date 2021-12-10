@@ -1,7 +1,7 @@
 .Message {
 	font-weight: 400;
 	margin: 10px auto 10px;
-	background-color: rgb(255, 255, 255, 0.1);
+	background-color: rgb(255, 255, 255, 0.12);
 	border: 5px solid;
 }
 .Message--orange {
