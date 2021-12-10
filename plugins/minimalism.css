@@ -76,7 +76,7 @@
 	text-align: right;
 	display: block;
 	float: left;
-	width: calc(100% - 40px);
+	width: calc(100% - 35px);
 }
 .Message-body > p {
 	margin: 5px;
