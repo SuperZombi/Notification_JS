@@ -1,289 +1,192 @@
-/*
-	text - string (Required)
-	element - document.Element (document.body)
-	autohide - boolean (true)
-	ms - integer (5000) (milliseconds)
-	buttons - array ( [button_name] )
-					( [[button_name, function]] )
-*/
-
-notifications_element = ""
-counter = 1
-async function Warning(text, arg1, arg2, arg3, arg4){
-	arr = check_elements(text, arg1, arg2, arg3, arg4)
-	await NewWarning(arr.text, arr.elem, arr.autohide, arr.ms, arr.buttons)
-}
-async function Error(text, arg1, arg2, arg3, arg4){
-	arr = check_elements(text, arg1, arg2, arg3, arg4)
-	await NewError(arr.text, arr.elem, arr.autohide, arr.ms, arr.buttons)
-}
-async function Success(text, arg1, arg2, arg3, arg4){
-	arr = check_elements(text, arg1, arg2, arg3, arg4)
-	await NewSuccess(arr.text, arr.elem, arr.autohide, arr.ms, arr.buttons)
+function Notification (argument) {
+	return new Notifications(argument)
 }
 
-function check_elements(text, arg1, arg2, arg3, arg4){
-	if (!notifications_element){
-		elem = document.body;
-	}
-	else{
-		elem = notifications_element
-	}
-	autohide=true; ms=5000; buttons=null;
-
-	if ((!text) || (typeof(text) != "string")){
-		throw "The variable 'text' is not defined";
-	}
-
-	if (typeof(arg1) == "object"){
-		if (Array.isArray(arg1)){
-			buttons=arg1;
-		}
-		else{
-			elem=arg1;
-		}
-	}
-	if (typeof(arg1) == "boolean"){
-		autohide=arg1;
-	}
-	if (typeof(arg1) == "number"){
-		ms=arg1;
-	}
-
-
-	if (typeof(arg2) == "object"){
-		if (Array.isArray(arg2)){
-			buttons=arg2;
-		}
-		else{
-			elem=arg2;
-		}
-	}
-	if (typeof(arg2) == "boolean"){
-		autohide=arg2;
-	}
-	if (typeof(arg2) == "number"){
-		ms=arg2;
-	}
-
-
-	if (typeof(arg3) == "object"){
-		if (Array.isArray(arg3)){
-			buttons=arg3;
-		}
-		else{
-			elem=arg3;
-		}
-	}
-	if (typeof(arg3) == "boolean"){
-		autohide=arg3;
-	}
-	if (typeof(arg3) == "number"){
-		ms=arg3;
-	}
-
-
-	if (typeof(arg4) == "object"){
-		if (Array.isArray(arg4)){
-			buttons=arg4;
-		}
-		else{
-			elem=arg4;
-		}
-	}
-	if (typeof(arg4) == "boolean"){
-		autohide=arg4;
-	}
-	if (typeof(arg4) == "number"){
-		ms=arg4;
-	}
-
-	return {text: text, autohide: autohide, ms: ms, buttons: buttons}
-}
-
-async function NewWarning(text, elem, autohide=true, ms=5000, buttons=null){
-	if (!elem){
-		if (!notifications_element){
-			elem = document.body;
-		}
-		else{
-			elem = notifications_element
-		}
-	}
-	div_el = await NewNotice("warning", text, buttons)
-	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 20));
-	div_el.style.opacity = 1;
-	div_el.style.transform = "scale(1)";
-
-	$($("#notification_"+counter)).on('click', function(e) {
-		closeMessage($(this).closest('.Message'));
-	});
-
-	if (autohide){
-		hide_notification(counter, ms)
-	}
-	counter++;
-	await new Promise(resolve => setTimeout(resolve, 400));
-}
-async function NewWarning2(args){
-	text = args.text;
-	if (!text){
-		throw "The variable 'text' is not defined in the function NewWarning2";
-	}
-	elem = args.element || notifications_element || document.body;
-	autohide = args.autohide
-	if (args.autohide == undefined) autohide = true;
-	ms = args.ms || 5000;
-	buttons = args.buttons || null;
-
-	await NewWarning(text, elem, autohide, ms, buttons)
-}
-async function NewError(text, elem, autohide=true, ms=5000, buttons=null){
-	if (!elem){
-		if (!notifications_element){
-			elem = document.body;
-		}
-		else{
-			elem = notifications_element
-		}
-	}
-	div_el = await NewNotice("error", text, buttons)
-	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 20));
-	div_el.style.opacity = 1;
-	div_el.style.transform = "scale(1)";
-
-	$($("#notification_"+counter)).on('click', function(e) {
-		closeMessage($(this).closest('.Message'));
-	});
-
-	if (autohide){
-		hide_notification(counter, ms)
-	}
-	counter++;
-	await new Promise(resolve => setTimeout(resolve, 400));
-}
-async function NewError2(args){
-	text = args.text;
-	if (!text){
-		throw "The variable 'text' is not defined in the function NewError2";
-	}
-	elem = args.element || notifications_element || document.body;
-	autohide = args.autohide
-	if (args.autohide == undefined) autohide = true;
-	ms = args.ms || 5000;
-	buttons = args.buttons || null;
-
-	await NewError(text, elem, autohide, ms, buttons)
-}
-async function NewSuccess(text, elem, autohide=true, ms=5000, buttons=null){
-	if (!elem){
-		if (!notifications_element){
-			elem = document.body;
-		}
-		else{
-			elem = notifications_element
-		}
-	}
-	div_el = await NewNotice("success", text, buttons)
-	elem.appendChild(div_el);
-	await new Promise(resolve => setTimeout(resolve, 20));
-	div_el.style.opacity = 1;
-	div_el.style.transform = "scale(1)";
-
-	$($("#notification_"+counter)).on('click', function(e) {
-		closeMessage($(this).closest('.Message'));
-	});
-
-	if (autohide){
-		hide_notification(counter, ms)
-	}
-	counter++;
-	await new Promise(resolve => setTimeout(resolve, 400));
-}
-async function NewSuccess2(args){
-	text = args.text;
-	if (!text){
-		throw "The variable 'text' is not defined in the function NewSuccess2";
-	}
-	elem = args.element || notifications_element || document.body;
-	autohide = args.autohide
-	if (args.autohide == undefined) autohide = true;
-	ms = args.ms || 5000;
-	buttons = args.buttons || null;
-
-	await NewSuccess(text, elem, autohide, ms, buttons)
-}
-async function NewNotice(what, text, buttons=null){
-	div = document.createElement('div');
-	if (what == "warning") div.className = 'Message Message--orange';
-	if (what == "error") div.className = 'Message Message--red';
-	if (what == "success") div.className = 'Message Message--green';
-	div.id = "notification_" + counter;
-
-	icon = document.createElement('div');
-	icon.className = 'Message-icon';
-	i = document.createElement('i');
-	if (what == "warning") i.className = 'fa fa-exclamation';
-	if (what == "error") i.className = 'fa fa-times';
-	if (what == "success") i.className = 'fa fa-check';
-	icon.appendChild(i);
-	div.appendChild(icon);
-
-	msg_body = document.createElement('div');
-	msg_body.className = 'Message-body';
-	p = document.createElement('p');
-	p.innerHTML = text;
-	msg_body.appendChild(p);
-	if (buttons){
-		for (i=0;i<buttons.length;i++){
-			button = document.createElement('button');
-			button.className = 'Message-button';
-			if (typeof(buttons[i]) == "object"){
-				button.innerHTML = buttons[i][0]
-				button.onclick = buttons[i][1]
-			}
-			if (typeof(buttons[i]) == "string"){
-				button.innerHTML = buttons[i]
-			}
-			msg_body.appendChild(button);
-		}
-	}
-	div.appendChild(msg_body);
-
-	but = document.createElement('button');
-	but.className = 'Message-close';
-	i = document.createElement('i');
-	i.className = "fa fa-times"
-	but.appendChild(i);
-
-	div.appendChild(but);
-	div.style.opacity = 0;
-	div.style.transform = "scale(0)";
-	return div;
-}
-
-
-function closeMessage(el, selector=false) {
-	if (!selector){
-		closeNotification(el.context)
-	}
-	el.addClass('is-hidden');
-	setTimeout(function(){el.addClass('hide')}, 500);
-}
-
-function hide_notification(count, ms){
+function hide_notification(el, ms){
 	setTimeout(function() {
-		closeNotification(document.getElementById('notification_'+count))
-		closeMessage($('#notification_'+count), true);
+		el.classList.add("is-hidden")
+		setTimeout(function(){el.classList.add("hide")}, 1000)
 	}, ms);
 }
 
-async function closeNotification(el_){
-	el_.style.opacity = 0;
-	el_.style.transform = "scale(0)";
-	await new Promise(resolve => setTimeout(resolve, 0));
-}
+class Notifications {
+	constructor(element) {
+	  	if (element == null){
+	  		this.element = document.body
+	  	}
+	  	else{
+	  		try{
+		  		var tmp_not = document.querySelector(element)
+		  		if(!tmp_not){
+		  			this.element = document.body
+		  			console.warn(`Element "${element}" was not found`)
+		  		}
+		  		else{
+		  			this.element = tmp_not;
+		  		}
+		  	}
+		  	catch{
+		  		this.element = document.body
+				console.warn(`Element "${element}" was not found`)
+			}
+	  	}
+	  	this.animation_in = ["scale", "opacity"]
+	}
 
-console.error("This version of Notification JS will be discontinued soon!\nPlease use the latest version of this library!\nhttps://github.com/SuperZombi/Notification_JS")
+	animationIN(anim_name){
+		var animations = ["opacity", "scale", "scale-right", "scale-left"]
+		if (anim_name){
+			if (anim_name == "none"){
+				this.animation_in = null
+			}
+			if (arguments.length > 1){
+				this.animation_in = Object.values(arguments)
+			}
+			else if (typeof(anim_name) == "object"){
+				this.animation_in = anim_name
+			}
+			else{
+				if (animations.includes(anim_name)){
+					this.animation_in = [anim_name]
+				}
+			}
+		}
+	}
+
+	clearAll(){
+		if (this.element != document.body){
+			this.element.innerHTML = '';
+		}
+	}
+	clear(){
+		if (this.element != document.body){
+			this.element.childNodes.forEach(function(e){
+				try{
+					if (e.classList.contains("is-hidden")){
+						e.remove()
+					}
+				}
+				catch{}
+			})
+		}
+	}
+
+
+	async Warning(text, arg1, arg2, arg3, arg4){
+		let arr = this._parse([text, arg1, arg2, arg3, arg4])
+		await this.NewNotification("warning", arr.text, this.element, arr.autohide, arr.ms, arr.buttons)
+	}
+	async Error(text, arg1, arg2, arg3, arg4){
+		let arr = this._parse([text, arg1, arg2, arg3, arg4])
+		await this.NewNotification("error", arr.text, this.element, arr.autohide, arr.ms, arr.buttons)
+	}
+	async Success(text, arg1, arg2, arg3, arg4){
+		let arr = this._parse([text, arg1, arg2, arg3, arg4])
+		await this.NewNotification("success", arr.text, this.element, arr.autohide, arr.ms, arr.buttons)
+	}
+
+
+	_parse(args){
+		let text=""; let autohide=true; let ms=5000; let buttons=null;
+		if ((!args[0]) || (typeof(args[0]) != "string")){
+			throw "The variable 'text' is not defined";
+		}
+		else{
+			text = args[0]
+		}
+		args.forEach(function(e){
+			if (typeof(e) == "object"){
+				if (Array.isArray(e)){
+					buttons=e;
+				}
+			}
+			if (typeof(e) == "boolean"){
+				autohide=e;
+			}
+			if (typeof(e) == "number"){
+				ms=e;
+			}
+		})
+
+		return {text: text, autohide: autohide, ms: ms, buttons: buttons}
+	}
+
+	async NewNotification(type, text, elem, autohide=true, ms=5000, buttons=null){
+		let div_el = await this.NewNotice(type, text, buttons)
+		this.addAnimate(div_el)
+		elem.appendChild(div_el);
+		await new Promise(resolve => setTimeout(resolve, 20));
+		div_el.removeAttribute("style");
+
+		if (autohide){
+			hide_notification(div_el, ms)
+		}
+		await new Promise(resolve => setTimeout(resolve, 400));
+	}
+
+	addAnimate(element){
+		if (this.animation_in.includes("scale")){
+			element.style.transform = "scale(0)"
+		}
+		if (this.animation_in.includes("scale-right")){
+			element.style.transformOrigin = "right bottom"
+		}
+		if (this.animation_in.includes("scale-left")){
+			element.style.transformOrigin = "left bottom"
+		}
+		if (this.animation_in.includes("opacity")){
+			element.style.opacity = 0
+		}
+	}
+
+	async NewNotice(what, text, buttons=null){
+		let div = document.createElement('div');
+		if (what == "warning") div.className = 'Message Message--orange';
+		if (what == "error") div.className = 'Message Message--red';
+		if (what == "success") div.className = 'Message Message--green';
+
+		let icon = document.createElement('div');
+		icon.className = 'Message-icon';
+		let i = document.createElement('i');
+		if (what == "warning") i.className = 'fa fa-exclamation';
+		if (what == "error") i.className = 'fa fa-times';
+		if (what == "success") i.className = 'fa fa-check';
+		icon.appendChild(i);
+		div.appendChild(icon);
+
+		let msg_body = document.createElement('div');
+		msg_body.className = 'Message-body';
+		let p = document.createElement('p');
+		p.innerHTML = text;
+		msg_body.appendChild(p);
+		if (buttons){
+			for (let j=0;j<buttons.length;j++){
+				let button = document.createElement('button');
+				button.className = 'Message-button';
+				if (typeof(buttons[j]) == "object"){
+					button.innerHTML = buttons[j][0]
+					button.onclick = buttons[j][1]
+				}
+				if (typeof(buttons[j]) == "string"){
+					button.innerHTML = buttons[j]
+				}
+				button.addEventListener("click", function(){hide_notification(div, 0)}, false)
+				msg_body.appendChild(button);
+			}
+		}
+		div.appendChild(msg_body);
+
+		let but = document.createElement('div');
+		but.className = 'Message-close';
+		let i2 = document.createElement('i');
+		i2.className = "fa fa-times"
+		i2.onclick = function() {
+			hide_notification(div, 0);
+		}
+		but.appendChild(i2);
+
+		div.appendChild(but);
+		return div;
+	}
+
+}
