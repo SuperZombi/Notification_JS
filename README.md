@@ -1,27 +1,15 @@
 # Notification_JS     <img src="imgs/notification-logo2.svg" height="100px" align="right">
 
-Quickly create a notification item
+### Quickly create a notification item
 
 <p align="center">
   <img src="imgs/main_img.png" width="500px">
 </p>
 
-## Notifications 2.0
-
 <p align="center">
-	<a href="/2.0/example.html">Usage Example</a> | 
-	<a href="https://superzombi.github.io/Notification_JS/2.0/example.html">Preview</a>
+	<a href="example.html">Usage Example</a> | 
+	<a href="https://superzombi.github.io/Notification_JS/example.html">Preview</a>
 </p>
-
-<details>
-	<summary>What's new</summary>
-	
-* Get rid of jQuery
-* Rewritten architecture for OOP
-* Reduced file size and increased work speed
-* Added plugins
-	
-</details>
 
 ### Usage:
 
@@ -29,7 +17,7 @@ HTML:
 ```html
 <head>
     <link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
-    <script src="https://superzombi.github.io/Notification_JS/2.0/notifications.js"></script>
+    <script src="https://superzombi.github.io/Notification_JS/notifications.js"></script>
 </head>
 ```
 
@@ -93,8 +81,8 @@ async function func_name(){
 ```javascript
 ["none", "opacity", "scale", "scale-right", "scale-left"]
 ```
-<a href="/2.0/animation_examples.html">Usage Example</a> | 
-<a href="https://superzombi.github.io/Notification_JS/2.0/animation_examples.html">Preview</a>
+<a href="plugins/animation_examples.html">Usage Example</a> | 
+<a href="https://superzombi.github.io/Notification_JS/plugins/animation_examples.html">Preview</a>
 </details>
 <hr>
   
@@ -119,7 +107,7 @@ async function func_name(){
   <img src="imgs/minim_light.png" width="405px">
   <img src="imgs/minim_dark.png" width="405px">
   <br>
-  <a href="/plugins/example_minimalism.html">Example</a> | 
+  <a href="plugins/example_minimalism.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_minimalism.html">Preview</a>
 </p>
 	
@@ -137,7 +125,7 @@ async function func_name(){
 <p align="center">
   <img src="imgs/windowsXP.png" width="450px">
   <br>
-  <a href="/plugins/example_windows.html">Example</a> | 
+  <a href="plugins/example_windows.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_windows.html">Preview</a>
 </p>
 
