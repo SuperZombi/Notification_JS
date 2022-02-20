@@ -3,6 +3,7 @@
 	margin: 10px auto 10px;
 	background-color: rgb(255, 255, 255, 0.12);
 	border: 5px solid;
+	border-color: #0074D9;
 }
 .Message--orange {
 	border-color: #F39C12;
@@ -62,6 +63,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
+	color: #0074D9;
 }
 .Message-icon {
 	width: 55px;
@@ -83,6 +85,7 @@
 	display: inline-block;
 	float: left;
 	text-align: left;
+	color: #0074D9;
 }
 
 .Message-button {
@@ -102,7 +105,7 @@
 }
 
 .Message-close {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 116, 217, 0.5);
 	opacity: 1;
 	transition: 0.2s;
 	height: 24px;
@@ -110,5 +113,5 @@
 	margin-top: 4px;
 }
 .Message-close:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 116, 217, 0.8);
 }
