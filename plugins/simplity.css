@@ -3,7 +3,7 @@
 	margin: 10px auto 10px;
 	background-color: rgb(255, 255, 255, 0.12);
 	border: none;
-	box-shadow: 0 0 0 2px rgb(0, 0, 0, 0.05);
+	box-shadow: 0 0 0 2px rgb(0, 0, 0, 0.1);
 	border-radius: 15px;
 }
 .Message-icon {
