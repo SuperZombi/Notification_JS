@@ -1,0 +1,76 @@
+.Message {
+	font-weight: 400;
+	margin: 10px auto 10px;
+	background-color: rgb(255, 255, 255, 0.12);
+	border: none;
+	box-shadow: 0 0 0 2px rgb(0, 0, 0, 0.05);
+	border-radius: 15px;
+}
+.Message-icon {
+	width: 25px;
+	padding: 0px;
+	background-color: #0074D9;
+	position: relative;
+	border-radius: 14px 0 0 14px;
+}
+.Message-icon > i {
+	display: none;
+}
+
+.Message--orange .Message-icon{
+	background-color: orange;
+}
+.Message--red .Message-icon{
+	background-color: red;
+}
+.Message--green .Message-icon{
+	background-color: #4CAF50;
+}
+
+.Message-body {
+	font-size: 16pt;
+	padding: 8px 0px;
+	text-align: right;
+	display: block;
+	float: left;
+	width: calc(100% - 35px);
+}
+.Message-body > p {
+	margin: 5px;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	color: white;
+	mix-blend-mode: difference;
+}
+
+.Message-button {
+	border-radius: 12px;
+	margin: 5px;
+	padding: 2px 12px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: 0.2s;
+}
+.Message-button:hover {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Message-button:active {
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	top: 2x;
+}
+
+.Message-close {
+	background-color: transparent;
+	mix-blend-mode: difference;
+}
+.Message-close > i{
+	color: rgb(255, 255, 255, 0.6);
+	transition: 0.2s ease;
+}
+.Message-close:hover {
+	background-color: transparent;
+}
+.Message-close:hover > i {
+	color: rgb(255, 255, 255, 1);
+}
