@@ -123,8 +123,8 @@ async function func_name(){
 ```
 	
 <p align="center">
-  <img src="imgs/simpl_light.png" width="405px">
-  <img src="imgs/simpl_dark.png" width="405px">
+  <img src="imgs/simple_light.png" width="405px">
+  <img src="imgs/simple_dark.png" width="405px">
   <br>
   <a href="plugins/example_simplity.html">Example</a> | 
   <a href="https://superzombi.github.io/Notification_JS/plugins/example_simplity.html">Preview</a>
