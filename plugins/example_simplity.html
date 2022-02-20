@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simplity plugin - Notification JS</title>
+	<link rel="shortcut icon" href="https://superzombi.github.io/Notification_JS/imgs/notification-logo.svg" type="image/svg+xml">
+	<link href="https://superzombi.github.io/Notification_JS/notifications.css" rel="stylesheet">
+	<link href="https://superzombi.github.io/Notification_JS/plugins/simplity.css" rel="stylesheet">
+	<script src="https://superzombi.github.io/Notification_JS/notifications.js"></script>
+
+<style type="text/css">
+	.notifications{
+		position: absolute;
+		bottom: 0;
+		padding: 20px;
+		width: 420px;
+	}
+	#notification1{
+		left: 2px;
+		background: white;
+	}
+	#notification2{
+		right: 2px;
+		background: black;
+	}	
+</style>
+</head>
+<body>
+<div class="notifications" id="notification1"></div>
+<div class="notifications" id="notification2"></div>
+
+<script type="text/javascript">
+	function show_more(){
+		alert("here")
+	}
+	window.onload = function(){
+		notice1 = Notification('#notification1');
+		notice1.Warning("Hello world!", false)
+		notice1.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
+		notice1.Success("Hello world!", false)
+		notice1.Info("Hello world!", false)
+
+		notice2 = Notification('#notification2');
+		notice2.Warning("Hello world!", false)
+		notice2.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
+		notice2.Success("Hello world!", false)
+		notice2.Info("Hello world!", false)
+	}
+
+</script>
+
+</body>
+</html>
