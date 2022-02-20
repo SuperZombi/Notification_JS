@@ -84,6 +84,10 @@ class Notifications {
 		let arr = this._parse([text, arg1, arg2, arg3, arg4])
 		await this.NewNotification("success", arr.text, this.element, arr.autohide, arr.ms, arr.buttons)
 	}
+	async Info(text, arg1, arg2, arg3, arg4){
+		let arr = this._parse([text, arg1, arg2, arg3, arg4])
+		await this.NewNotification("info", arr.text, this.element, arr.autohide, arr.ms, arr.buttons)
+	}
 
 
 	_parse(args){
@@ -144,6 +148,7 @@ class Notifications {
 		if (what == "warning") div.className = 'Message Message--orange';
 		if (what == "error") div.className = 'Message Message--red';
 		if (what == "success") div.className = 'Message Message--green';
+		if (what == "info") div.className = 'Message';
 
 		let icon = document.createElement('div');
 		icon.className = 'Message-icon';
@@ -151,6 +156,7 @@ class Notifications {
 		if (what == "warning") i.className = 'fa fa-exclamation';
 		if (what == "error") i.className = 'fa fa-times';
 		if (what == "success") i.className = 'fa fa-check';
+		if (what == "info") i.className = 'fa fa-info';
 		icon.appendChild(i);
 		div.appendChild(icon);
 
