@@ -34,7 +34,7 @@ async function func_name(){
 
 ## Methods:
 
-### ```Warning()```, ```Error()```, ```Success()``` (text, autohide, ms, buttons)
+### ```Warning()```, ```Error()```, ```Success()```, ```Info()``` (text, autohide, ms, buttons)
   <code>text</code> - string (Required) </br>
   <code>autohide</code> - boolean (default: <code>true</code>) </br>
   <code>ms</code> - integer (default: <code>5000</code>) (milliseconds) </br>
