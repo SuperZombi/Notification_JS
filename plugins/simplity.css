@@ -29,11 +29,11 @@
 
 .Message-body {
 	font-size: 16pt;
-	padding: 8px 0px;
+	padding: 8px 0 8px 4px;
 	text-align: right;
 	display: block;
 	float: left;
-	width: calc(100% - 35px);
+	width: calc(100% - 40px);
 }
 .Message-body > p {
 	margin: 5px;
