@@ -24,7 +24,7 @@
 	}
 	window.onload = function(){
 		setTimeout(async function(){
-			notice = Notification('#notifications');
+			notice = Notifications('#notifications');
 
 			await notice.Warning("Default animation", 3000)
 			await sleep(500)

@@ -23,7 +23,7 @@ HTML:
 
 JavaScript:
 ```javascript
-notice = Notification('#notifications');
+notice = Notifications('#notifications');
   
 async function func_name(){
     await notice.Warning("Hello world!", false)
@@ -44,7 +44,7 @@ async function func_name(){
 <details>
 	<summary>Constructor:</summary>
 
-### ```Notification()```
+### ```Notifications()```
 
 <table>
 	<tr>

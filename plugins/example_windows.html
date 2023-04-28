@@ -24,7 +24,7 @@
 		alert("here")
 	}
 	window.onload = function(){
-		notice = Notification('#notifications');
+		notice = Notifications('#notifications');
 		notice.Warning("Hello world!", false)
 		notice.Error("Hello world!", false, [['OK', show_more], 'Cancel'])
 		notice.Success("Hello world!", false)

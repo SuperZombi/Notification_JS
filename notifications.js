@@ -1,7 +1,3 @@
-function Notification (argument) {
-	return new Notifications(argument)
-}
-
 function hide_notification(el, ms){
 	setTimeout(function() {
 		el.classList.add("is-hidden")
