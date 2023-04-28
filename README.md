@@ -23,7 +23,7 @@ HTML:
 
 JavaScript:
 ```javascript
-notice = Notifications('#notifications');
+notice = new Notifications('#notifications');
   
 async function func_name(){
     await notice.Warning("Hello world!", false)
